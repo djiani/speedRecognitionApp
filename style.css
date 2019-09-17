@@ -18,8 +18,9 @@ body {
     overflow: scroll;
     margin-top: 10vh;
   }
+  
   .text-box {
-    max-height: 70vh;
+    height: 20vh;
     overflow: scroll;
   }
   .text-box:focus {
@@ -42,6 +43,19 @@ body {
     align-items: center;
     justify-content: center;
   }
+
+  .description{
+    text-align: center;
+    font-size: 20px;
+  }
+
+.description > ul li{
+    list-style-type: none;
+    text-decoration-style: none;
+    color: cyan;
+    
+  }
+
   @media (max-width: 768px) {
     .container {
       width: 85vw;

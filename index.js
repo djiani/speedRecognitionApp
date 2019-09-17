@@ -53,12 +53,12 @@ const getDate = () => {
 };
 
 const getTheWeather = (speech) => {
-  fetch(`http://api.openweathermap.org/data/2.5/weather?q=${speech.split(' ')[5]}&appid=58b6f7c78582bffab3936dac99c31b25&units=metric`) 
+  fetch(`https://api.openweathermap.org/data/2.5/weather?q=${speech.split(' ')[5]}&appid=58b6f7c78582bffab3936dac99c31b25&units=metric`) 
   .then(function(response){
     return response.json();
   })
   .then(function(weather){
-    if (weather.cod === '404') {
+    if (weather.code === '404') {
       utterThis = new SpeechSynthesisUtterance(`I cannot find the weather for ${speech.split(' ')[5]}`);
       synth.speak(utterThis);
       return;
